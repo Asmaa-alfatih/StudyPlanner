@@ -1,0 +1,1104 @@
+/*=========================
+  GOOGLE FONT & RESET
+=========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+    list-style:none;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/*=========================
+      HEADER
+=========================*/
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+/*=========================
+        LOGO
+=========================*/
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+/*=========================
+        NAVBAR
+=========================*/
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#333;
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+nav ul li a:hover{
+    color:#2563eb;
+}
+
+nav ul li a.active{
+    color:#2563eb;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:3px;
+    background:#2563eb;
+    transition:.3s;
+    border-radius:5px;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+    width:100%;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/*=========================
+        HERO
+=========================*/
+
+.hero{
+    margin-top:90px;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    gap:50px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:55px;
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#666;
+    margin-bottom:35px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:550px;
+    animation:float 4s ease-in-out infinite;
+}
+
+/*=========================
+      BUTTONS
+=========================*/
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+}
+
+/*=========================
+    PAGE TITLE
+=========================*/
+
+.page-title{
+    margin-top:120px;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.page-title h1{
+    font-size:42px;
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.page-title p{
+    color:#666;
+    font-size:18px;
+}
+
+/*=========================
+      FEATURES
+=========================*/
+
+.features{
+    padding:80px 8%;
+}
+
+.features h2{
+    text-align:center;
+    font-size:38px;
+    color:#1e3a8a;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:50px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#1e3a8a;
+}
+
+.card p{
+    color:#666;
+}
+
+/*=========================
+      STATISTICS
+=========================*/
+
+.statistics{
+    background:#2563eb;
+    color:#fff;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:30px;
+    padding:70px 8%;
+    text-align:center;
+}
+
+.stat h2{
+    font-size:45px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/*=========================
+        ABOUT
+=========================*/
+
+.about{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    padding:90px 8%;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    color:#1e3a8a;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+}
+
+/*=========================
+        FOOTER
+=========================*/
+
+footer{
+    background:#1e3a8a;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer-content h3{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.footer-content p{
+    margin:10px 0;
+}
+
+.social{
+    margin:20px 0;
+}
+
+.social a{
+    display:inline-flex;
+    width:45px;
+    height:45px;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#fff;
+    color:#2563eb;
+    margin:0 8px;
+    transition:.3s;
+}
+
+.social a:hover{
+    transform:translateY(-5px);
+}
+
+/*=========================
+      ANIMATION
+=========================*/
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+/*=========================
+     PLANNER SECTION
+=========================*/
+
+.planner-container{
+    padding:40px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.planner-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    border-left:5px solid #2563eb;
+}
+
+.planner-card:hover{
+    transform:translateY(-8px);
+}
+
+.planner-card h2{
+    color:#1e3a8a;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.planner-card h2 i{
+    color:#2563eb;
+    margin-right:10px;
+}
+
+.planner-card ul li{
+    padding:10px;
+    color:#555;
+    border-bottom:1px solid #eee;
+}
+
+.planner-card ul li:last-child{
+    border:none;
+}
+
+
+/*=========================
+      STUDY TIPS
+=========================*/
+
+.study-tips{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.study-tips h2{
+    color:#1e3a8a;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.tips{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.tip{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.tip:hover{
+    transform:translateY(-10px);
+}
+
+.tip i{
+    font-size:45px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.tip h3{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+
+/*=========================
+       COURSES
+=========================*/
+
+.courses-container{
+    padding:50px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+
+.course-card{
+
+    background:#fff;
+    padding:35px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+
+}
+
+
+.course-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+
+.course-card i{
+
+    font-size:55px;
+    color:#2563eb;
+    margin-bottom:20px;
+
+}
+
+
+.course-card h2{
+
+    color:#1e3a8a;
+    margin-bottom:15px;
+
+}
+
+
+.course-card p{
+
+    color:#666;
+    margin-bottom:25px;
+
+}
+
+
+.course-card button{
+
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+
+.course-card button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+/*=========================
+    SEMESTER SUMMARY
+=========================*/
+
+.semester{
+
+    padding:70px 8%;
+    text-align:center;
+
+}
+
+
+.semester h2{
+
+    color:#1e3a8a;
+    font-size:38px;
+    margin-bottom:40px;
+
+}
+
+
+.summary{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+
+}
+
+
+.box{
+
+    background:#2563eb;
+    color:white;
+    padding:35px;
+    border-radius:20px;
+
+}
+
+
+.box h3{
+
+    font-size:40px;
+
+}
+
+
+/*=========================
+        NOTES
+=========================*/
+
+
+.notes-section{
+
+    padding:50px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+
+.note-card{
+
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+
+.note-card:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+.note-card i{
+
+    font-size:45px;
+    color:#2563eb;
+    margin-bottom:20px;
+
+}
+
+
+.note-card h3{
+
+    color:#1e3a8a;
+    margin-bottom:15px;
+
+}
+
+
+.note-card p{
+
+    color:#666;
+
+}
+
+
+/*=========================
+       WRITE NOTE
+=========================*/
+
+.write-note{
+
+    padding:60px 8%;
+    text-align:center;
+
+}
+
+
+.write-note h2{
+
+    color:#1e3a8a;
+    font-size:35px;
+    margin-bottom:30px;
+
+}
+
+
+.write-note form{
+
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+.write-note input,
+.write-note textarea{
+
+    width:100%;
+    padding:15px;
+    border-radius:15px;
+    border:1px solid #ddd;
+    outline:none;
+    font-size:16px;
+
+}
+
+
+.write-note textarea{
+
+    resize:none;
+
+}
+
+
+.write-note button{
+
+    padding:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:17px;
+
+}
+
+
+.write-note button:hover{
+
+    background:#1d4ed8;
+
+}
+/*=========================
+       PROGRESS PAGE
+=========================*/
+
+.progress-section{
+
+    padding:50px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+
+}
+
+
+.progress-card{
+
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.progress-card h2{
+
+    color:#1e3a8a;
+    margin-bottom:20px;
+    font-size:22px;
+
+}
+
+
+.progress-bar{
+
+    width:100%;
+    height:30px;
+    background:#e5e7eb;
+    border-radius:30px;
+    overflow:hidden;
+
+}
+
+
+.progress-fill{
+
+    height:100%;
+    background:linear-gradient(90deg,#2563eb,#60a5fa);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    border-radius:30px;
+
+}
+
+
+/*=========================
+      ACHIEVEMENTS
+=========================*/
+
+
+.achievement{
+
+    padding:70px 8%;
+    text-align:center;
+
+}
+
+
+.achievement h2{
+
+    color:#1e3a8a;
+    font-size:38px;
+    margin-bottom:40px;
+
+}
+
+
+.achievement-container{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+
+}
+
+
+.achievement-box{
+
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+
+.achievement-box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.achievement-box i{
+
+    color:#2563eb;
+    font-size:45px;
+    margin-bottom:15px;
+
+}
+
+
+.achievement-box h3{
+
+    font-size:40px;
+    color:#1e3a8a;
+
+}
+
+
+/*=========================
+        GOALS
+=========================*/
+
+
+.goal-section{
+
+    padding:60px 8%;
+    text-align:center;
+
+}
+
+
+.goal-section h2{
+
+    color:#1e3a8a;
+    font-size:35px;
+    margin-bottom:30px;
+
+}
+
+
+.goal-list{
+
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:left;
+
+}
+
+
+.goal-list li{
+
+    padding:15px;
+    color:#555;
+    font-size:17px;
+
+}
+
+
+.goal-list i{
+
+    color:#2563eb;
+    margin-right:10px;
+
+}
+
+
+/*=========================
+       CONTACT PAGE
+=========================*/
+
+
+.contact-container{
+
+    padding:60px 8%;
+    display:flex;
+    gap:50px;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.contact-info{
+
+    flex:1;
+
+}
+
+
+.contact-info h2{
+
+    color:#1e3a8a;
+    font-size:35px;
+    margin-bottom:25px;
+
+}
+
+
+.contact-info p{
+
+    margin:20px 0;
+    color:#555;
+    font-size:17px;
+
+}
+
+
+.contact-info i{
+
+    color:#2563eb;
+    margin-right:10px;
+
+}
+
+
+.contact-form{
+
+    flex:1;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.contact-form form{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:15px;
+    border-radius:15px;
+    border:1px solid #ddd;
+    outline:none;
+    font-size:16px;
+
+}
+
+
+.contact-form textarea{
+
+    resize:none;
+
+}
+
+
+.contact-form button{
+
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+
+}
+
+
+.contact-form button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+/*=========================
+       SOCIAL ICONS
+=========================*/
+
+
+.social-icons a{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    background:#2563eb;
+    color:white;
+    border-radius:50%;
+    margin:10px;
+    transition:.3s;
+
+}
+
+
+.social-icons a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/*=========================
+      RESPONSIVE DESIGN
+=========================*/
+
+
+@media(max-width:900px){
+
+
+header{
+
+    padding:0 5%;
+
+}
+
+
+nav{
+
+    display:none;
+
+}
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
+.hero{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+
+.about{
+
+    flex-direction:column;
+
+}
+
+
+.contact-container{
+
+    flex-direction:column;
+
+}
+
+
+}
+
+
+@media(max-width:600px){
+
+
+.hero-content h1{
+
+    font-size:32px;
+
+}
+
+
+.page-title h1{
+
+    font-size:32px;
+
+}
+
+
+.features h2,
+.study-tips h2,
+.semester h2{
+
+    font-size:30px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+
+}
+
+
+}
