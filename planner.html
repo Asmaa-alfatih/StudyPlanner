@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Planner | Student Study Planner</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    .add-task {
+        padding: 40px 8%;
+        text-align: center;
+    }
+
+    .add-task h2 {
+        color: #1e3a8a;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .task-form {
+        display: flex;
+        gap: 15px;
+        max-width: 700px;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .task-form select {
+        padding: 14px 20px;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        background: white;
+        min-width: 150px;
+        flex: 1;
+    }
+
+    .task-form input {
+        padding: 14px 20px;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        flex: 2;
+        min-width: 200px;
+    }
+
+    .task-form button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .3s;
+        white-space: nowrap;
+    }
+
+    .task-form button:hover {
+        background: #1d4ed8;
+        transform: translateY(-3px);
+    }
+
+    .task-form button i {
+        margin-right: 8px;
+    }
+
+    @media(max-width:600px) {
+        .task-form {
+            flex-direction: column;
+        }
+        .task-form select,
+        .task-form input,
+        .task-form button {
+            width: 100%;
+        }
+    }
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-book-open-reader"></i>
+Study Planner
+</div>
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="planner.html" class="active">Planner</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="progress.html">Progress</a></li>
+
+<li><a href="notes.html">Notes</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+<a href="#" onclick="logout()" style="color: #dc2626;">
+    <i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="page-title">
+
+<h1>Weekly Study Planner</h1>
+
+<p>Create your own study plan and track your tasks.</p>
+
+</section>
+
+
+
+
+<section class="add-task">
+
+
+<h2><i class="fa-solid fa-plus-circle" style="color:#2563eb;"></i> Add New Study Task</h2>
+
+
+<div class="task-form">
+
+
+<select id="day">
+
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+
+</select>
+
+
+
+<input type="text" id="task" placeholder="Enter your study task...">
+
+
+
+<button onclick="addTask()">
+<i class="fa-solid fa-plus"></i> Add Task
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="planner-container" id="plannerList">
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 Student Study Planner | Stay Organized
+</p>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

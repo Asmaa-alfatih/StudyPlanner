@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Progress | Student Study Planner</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    .achievement {
+        padding: 70px 8%;
+        text-align: center;
+    }
+
+    .achievement h2 {
+        color: #1e3a8a;
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+
+    .achievement-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .achievement-box {
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        transition: .3s;
+    }
+
+    .achievement-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .achievement-box i {
+        font-size: 45px;
+        color: #2563eb;
+        margin-bottom: 20px;
+    }
+
+    .achievement-box h3 {
+        font-size: 40px;
+        color: #1e3a8a;
+        margin-bottom: 5px;
+    }
+
+    .achievement-box p {
+        color: #666;
+        font-size: 16px;
+    }
+
+    .progress-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        transition: .3s;
+    }
+
+    .progress-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .progress-card h2 {
+        color: #1e3a8a;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 30px;
+        background: #e5e7eb;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background: #2563eb;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: width 0.5s ease;
+    }
+
+    .no-tasks {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 50px;
+        color: #999;
+    }
+
+    .no-tasks i {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    @media(max-width:700px) {
+        .achievement-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-book-open-reader"></i>
+
+Study Planner
+
+</div>
+
+
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="planner.html">Planner</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="progress.html" class="active">Progress</a></li>
+
+<li><a href="notes.html">Notes</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+<a href="#" onclick="logout()" style="color: #dc2626;">
+    <i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+</li>
+
+
+</ul>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="page-title">
+
+<h1>Study Progress</h1>
+
+<p>Track your completed study tasks.</p>
+
+</section>
+
+
+
+
+
+<section class="progress-section" id="progressContainer">
+
+
+</section>
+
+
+
+
+
+
+
+<section class="achievement">
+
+
+<h2><i class="fa-solid fa-chart-simple" style="color:#2563eb;"></i> Weekly Summary</h2>
+
+
+<div class="achievement-container">
+
+
+<div class="achievement-box">
+
+<i class="fa-solid fa-list-check"></i>
+
+<h3 id="totalTasks">0</h3>
+
+<p>Total Tasks</p>
+
+</div>
+
+
+
+<div class="achievement-box">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h3 id="completedTasks">0</h3>
+
+<p>Completed Tasks</p>
+
+</div>
+
+
+
+<div class="achievement-box">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3 id="percentage">0%</h3>
+
+<p>Completion Rate</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 Student Study Planner | Keep Learning Every Day
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

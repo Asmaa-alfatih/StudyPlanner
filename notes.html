@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notes | Student Study Planner</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    .write-note {
+        padding: 60px 8%;
+        text-align: center;
+    }
+
+    .write-note h2 {
+        color: #1e3a8a;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+
+    .write-note form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .write-note input,
+    .write-note textarea {
+        padding: 15px;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        outline: none;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .write-note input:focus,
+    .write-note textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .write-note button {
+        background: #2563eb;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    .write-note button:hover {
+        background: #1d4ed8;
+        transform: translateY(-3px);
+    }
+
+    .write-note button i {
+        margin-right: 8px;
+    }
+
+    .note-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        transition: .3s;
+        position: relative;
+    }
+
+    .note-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .note-card i {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .note-card h3 {
+        color: #1e3a8a;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .note-card p {
+        color: #666;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+    .note-card small {
+        color: #999;
+        font-size: 12px;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .note-card .delete-btn {
+        background: #dc2626;
+        color: white;
+        border: none;
+        padding: 6px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 13px;
+        transition: .3s;
+    }
+
+    .note-card .delete-btn:hover {
+        background: #b91c1c;
+        transform: scale(1.05);
+    }
+
+    .empty-notes {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 50px;
+        color: #999;
+    }
+
+    .empty-notes i {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: #ccc;
+    }
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-book-open-reader"></i>
+Study Planner
+</div>
+
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="planner.html">Planner</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="progress.html">Progress</a></li>
+
+<li><a href="notes.html" class="active">Notes</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+<a href="#" onclick="logout()" style="color: #dc2626;">
+    <i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="page-title">
+
+<h1><i class="fa-solid fa-note-sticky" style="color:#2563eb;"></i> Study Notes</h1>
+
+<p>Write your important notes and reminders.</p>
+
+</section>
+
+
+<!-- عرض الملاحظات المحفوظة -->
+<section class="notes-section" id="notesContainer">
+
+<!-- الملاحظات ستظهر هنا تلقائياً -->
+
+</section>
+
+
+<section class="write-note">
+
+
+<h2><i class="fa-solid fa-pen-to-square" style="color:#2563eb;"></i> Add New Note</h2>
+
+
+<form id="noteForm">
+
+<input type="text" id="noteTitle" placeholder="Note Title" required>
+
+<textarea id="noteContent" rows="6" placeholder="Write your note here..." required></textarea>
+
+<button type="submit">
+<i class="fa-solid fa-floppy-disk"></i> Save Note
+</button>
+
+</form>
+
+
+</section>
+
+
+
+<footer>
+
+<p>
+© 2026 Student Study Planner | All Rights Reserved
+</p>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
